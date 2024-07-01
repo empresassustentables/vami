@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ayudando al mundo</title>
+    <style>
+        /* Estilos generales */
+        body {
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Estilos para el slider */
+        .slider {
+            width: 100%;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slider .slides img {
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+
+        /* Botones para controlar el slider */
+        .slider-controls {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .slider-controls button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        
+        .hobbies-section {
+            margin-bottom: 40px;
+        }
+
+        .hobbies-section h2 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .hobby {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .hobby img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .hobby p {
+            color: #555;
+        }
+    </style>
+</head>
+<td width="629"><marquee direction = "left"> <Font color="black" Size=+7> <em>VALENCIA ORIGEL</em></font></p>
+		    </Marquee></td>
+<body>
+    <div class="container">
+        <h1>¿Que empresas ayudan al mundo y por que son sustentables?</h1>
+
+        <!-- Slider de Imágenes -->
+        <div class="slider">
+            <div class="slides">
+                <img src="C:\Users\pc\OneDrive\Escritorio\carpeta final\imag\natura.png" width="100px" height="400px">
+                <img src="C:\Users\pc\OneDrive\Escritorio\carpeta final\imag\rotoplas.jpg" width="100px" height="400px">
+                <img src="C:\Users\pc\OneDrive\Escritorio\carpeta final\imag\bimbo.jpg" width="100px" height="400px">
+                
+            </div>
+            <div class="slider-controls">
+                <button onclick="prevSlide()">&#10094; Anterior</button>
+                <button onclick="nextSlide()">Siguiente &#10095;</button>
+            </div>
+        </div>
+        <div class="hobbies-section">
+            <h2>CONOCE A UNAS DE LAS CUANTAS EMPRESAS QUE AYUDAN AL MEDIO AMBIENTE</h2>
+            <div class="hobby">
+                <img src="C:\Users\pc\OneDrive\Escritorio\carpeta final\imag\logor.png"  width="200px" height="220px">
+                <p> RotoPlas es conocida por sus contribuciones a la sustentabilidad y al medio ambiente principalmente a través de sus productos y prácticas comerciales. donde utiliza materiales reciclados en la fabricación de muchos de sus productos, lo que reduce la demanda de materias primas vírgenes y disminuye la cantidad de residuos plásticos. ademas de que Sus productos están diseñados para ser duraderos y eficientes en el uso de recursos como el agua. Por ejemplo, sus sistemas de almacenamiento de agua promueven la conservación y el uso responsable de este recurso vital.</p>
+            </div>
+            <div class="hobby">
+                <img src="C:\Users\pc\OneDrive\Escritorio\carpeta final\imag\logon.png"  width="200px" height="220px">
+                <p>Natura es reconocida por su compromiso con la sustentabilidad y el medio ambiente a través de varias iniciativas y prácticas empresariales. : Natura prioriza el uso de ingredientes naturales y sostenibles en sus productos cosméticos y de cuidado personal. Esto incluye el apoyo a comunidades locales y la promoción de prácticas agrícolas que respeten el medio ambiente. La empresa trabaja en la conservación de la biodiversidad en las regiones donde obtiene sus ingredientes, contribuyendo así a la protección de ecosistemas frágiles y especies en peligro.
+</p>
+            </div>
+        </div>
+
+        <div class="hobbies-section">
+            
+            <div class="hobby">
+                <img src="C:\Users\pc\OneDrive\Escritorio\carpeta final\imag\bimbollo.jpg"  width="600px" height="220px">
+                <p>Grupo Bimbo, una de las empresas más grandes de panificación a nivel mundial, también ha implementado diversas iniciativas para promover la sustentabilidad y reducir su impacto ambiental. Bimbo ha implementado programas para mejorar la eficiencia energética en sus procesos de producción y distribución. Esto incluye el uso de tecnologías más eficientes y la optimización de los recursos energéticos. La empresa se enfoca en la gestión responsable de residuos, buscando reducir, reutilizar y reciclar los materiales utilizados en sus operaciones. También promueve prácticas de economía circular dentro de su cadena de suministro.</p>
+            </div>
+            
+
+    <script>
+        // Slider de imágenes
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var slides = document.querySelectorAll('.slides img');
+            if (slides.length === 0) return;
+
+            slides.forEach(function(slide) {
+                slide.style.display = 'none';
+            });
+
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 4000); // Cambia la imagen cada 4 segundos
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlides();
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            showSlides();
+        }
+   
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresas Sustentables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+            flex: 1;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AYUDANOS A QUE EL MUNDO SEA MEJOR</h1>
+<center>
+         <h2>UNETENOS REGISTRANDOTE PARA QUE AYUDES COMO A NOSOTROS AL PLANETA <3 </h2>
+ 
+</center>
+        <table id="tablaDatos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre del usuario</th>
+                    <th>numero telefonico o correo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se mostrarán los datos -->
+            </tbody>
+        </table>
+        <form id="formulario">
+            <input type="hidden" id="indice" value="">
+            <input type="text" id="nombreEmpresa" placeholder="Nombre del usuario">
+            <input type="text" id="descripcion" placeholder="Numero o correo">
+            <button type="submit" id="btnGuardar">Guardar</button>
+            <button type="button" id="btnCancelar">Cancelar</button>
+        </form>
+    </div>
+    
+    <script>
+        // Datos iniciales (simulados)
+        let empresas = [
+            
+        ];
+
+        const tablaBody = document.querySelector('#tablaDatos tbody');
+        const formulario = document.querySelector('#formulario');
+        const btnGuardar = document.querySelector('#btnGuardar');
+        const btnCancelar = document.querySelector('#btnCancelar');
+        const indiceInput = document.querySelector('#indice');
+        let modoEdicion = false;
+        let indiceEditar = null;
+
+        // Función para mostrar los datos en la tabla
+        function mostrarDatos() {
+            tablaBody.innerHTML = '';
+            empresas.forEach((empresa, index) => {
+                tablaBody.innerHTML += `
+                    <tr>
+                        <td>${empresa.id}</td>
+                        <td>${empresa.nombre}</td>
+                        <td>${empresa.descripcion}</td>
+                        <td>
+                            <button onclick="editar(${index})">Editar</button>
+                            <button onclick="eliminar(${index})">Eliminar</button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        // Función para agregar una nueva empresa
+        function agregar() {
+            const nombreEmpresa = document.querySelector('#nombreEmpresa').value;
+            const descripcion = document.querySelector('#descripcion').value;
+            
+            if (nombreEmpresa && descripcion) {
+                if (modoEdicion) {
+                    empresas[indiceEditar].nombre = nombreEmpresa;
+                    empresas[indiceEditar].descripcion = descripcion;
+                    modoEdicion = false;
+                    indiceEditar = null;
+                    btnGuardar.textContent = 'Guardar';
+                    btnCancelar.style.display = 'none';
+                } else {
+                    const nuevoId = empresas.length > 0 ? empresas[empresas.length - 1].id + 1 : 1;
+                    empresas.push({ id: nuevoId, nombre: nombreEmpresa, descripcion: descripcion });
+                }
+                mostrarDatos();
+                limpiarFormulario();
+            } else {
+                alert('Por favor ingresa el nombre de la empresa y la descripción');
+            }
+        }
+
+        // Función para limpiar el formulario
+        function limpiarFormulario() {
+            indiceInput.value = '';
+            document.querySelector('#nombreEmpresa').value = '';
+            document.querySelector('#descripcion').value = '';
+        }
+
+        // Función para editar una empresa
+        function editar(index) {
+            const empresa = empresas[index];
+            if (empresa) {
+                document.querySelector('#nombreEmpresa').value = empresa.nombre;
+                document.querySelector('#descripcion').value = empresa.descripcion;
+                indiceInput.value = index;
+                modoEdicion = true;
+                indiceEditar = index;
+                btnGuardar.textContent = 'Actualizar';
+                btnCancelar.style.display = 'inline-block';
+            }
+        }
+
+        // Función para eliminar una empresa
+        function eliminar(index) {
+            if (confirm('¿Estás seguro de que quieres eliminar esta empresa?')) {
+                empresas.splice(index, 1);
+                mostrarDatos();
+                limpiarFormulario();
+                modoEdicion = false;
+                indiceEditar = null;
+                btnGuardar.textContent = 'Guardar';
+                btnCancelar.style.display = 'none';
+            }
+        }
+
+        // Eventos
+        mostrarDatos();
+        formulario.onsubmit = function(event) {
+            event.preventDefault();
+            agregar();
+        };
+
+        btnCancelar.onclick = function() {
+            limpiarFormulario();
+            modoEdicion = false;
+            indiceEditar = null;
+            btnGuardar.textContent = 'Guardar';
+            btnCancelar.style.display = 'none';
+        };
+    </script>
+</body>
+</html>
